@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Prueba ;)</title>
+    </head>
+    <body>
+        <h1>Air - Polen</h1>
+
+        <table>
+            <thead>
+                <table border="1"></table>
+                <!-- Título de la tabla -->
+                <caption> Muestras recogidas </caption>
+                
+
+                <!-- La primera fila con los títulos -->
+                <tr>
+                    <th>date</th>
+                    <th>Alnus</th>
+                    <th>Betulus</th>
+                    <th>Taxus</th>
+                    <th>Fraxinus</th>
+                    <th>Poaceae</th>
+                    <th>Quercus</th>
+                    <th>Ulmus</th>
+                    <th>Urtica</th>
+                </tr>
+            </thead>
+            <!-- Esto no está hecho  pero es para rellenar la tabla del html según la BD-->
+            {% for user in users %}
+                <tr>
+                    <td>{{user['nombre']}}</td>
+                    <td>{{user['apellidos']}}</td>
+                    <td>{{user['clave']}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <!-- Creo que muestra un botón para acceder al formulario.html -->
+        {% if mostrar_enlace %}
+            <a href="{{ url_for('formulario') }}">Añadir nuevo usuario</a>
+        {% endif %}
+
+    </body>
+
+</html>

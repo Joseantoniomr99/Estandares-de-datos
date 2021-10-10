@@ -1,0 +1,35 @@
+[
+	{
+		"date" : "2010-02-25 00:00:00",
+		"Alnus" : 10,
+		"Betulus" : 0,
+		"Taxus" : 0,
+		"Fraxinus" : 0,
+		"Poaceae" : 0,
+		"Quercus" : 0,
+		"Ulmus" : 0,
+		"Urtica" : 0
+	},
+	{
+		"date" : "2010-03-25 00:00:00",
+		"Alnus" : null,
+		"Betulus" : 4,
+		"Taxus" : 554,
+		"Fraxinus" : 0,
+		"Poaceae" : 0,
+		"Quercus" : 0,
+		"Ulmus" : 28,
+		"Urtica" : 0
+	},
+	{
+		"date" : "2010-04-25 00:00:00",
+		"Alnus" : 0,
+		"Betulus" : 627,
+		"Taxus" : 2,
+		"Fraxinus" : null,
+		"Poaceae" : null,
+		"Quercus" : 22,
+		"Ulmus" : 44,
+		"Urtica" : 0
+	}
+]
