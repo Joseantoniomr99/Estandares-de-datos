@@ -1,0 +1,33 @@
+<h1>Lista de caracteristicas</h1>
+<table>
+    <thead>
+        <tr>
+           <th>Date</th>
+           <th>Alnus</th>
+           <th>Betulus</th>
+           <th>Taxus</th>
+           <th>Fraxinus</th>
+           <th>Poaceae</th>
+           <th>Quercus</th>
+           <th>Ulmus</th>
+           <th>Urtica</th>
+        </tr>
+    </thead>
+{% for user in users %}
+    <tr>
+        <td>{{user['date']}}</td>
+        <td>{{user['Alnus']}}</td>
+        <td>{{user['Betulus']}}</td>
+        <td>{{user['Taxus']}}</td>
+        <td>{{user['Fraxinus']}}</td>
+        <td>{{user['Poaceae']}}</td>
+        <td>{{user['Quercus']}}</td>
+        <td>{{user['Ulmus']}}</td>
+        <td>{{user['Urtica']}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+{% if mostrar_enlace %}
+    <a href="{{ url_for('formulario') }}">Añadir nueva muestra polen</a>
+{% endif %}
