@@ -13,15 +13,15 @@ def pagina_principal():
     return render_template("home.html")
    
 
-@app.route('/muestras')
-def muestras():
-    muestras = mongo_col.find()
-    return render_template("muestras.html.j2", users = muestras, mostrar_enlace = True)
+@app.route('/samples')
+def samples():
+    samples = mongo_col.find()
+    return render_template("samples.html.j2", users = samples, mostrar_enlace = True)
 
-@app.route('/formulario', methods = ['GET', 'POST'])
-def formulario():
+@app.route('/form', methods = ['GET', 'POST'])
+def form():
     if request.method == 'GET':
-        return render_template("formulario.html.j2")
+        return render_template("form.html.j2")
     elif request.method == 'POST':
         date = request.form['date']
         Alnus = request.form['Alnus']
@@ -34,7 +34,7 @@ def formulario():
         Urtica = request.form['Urtica']
         usuario = {"date" : date, "Alnus": Alnus, "Betulus" : Betulus, "Taxus": Taxus, "Fraxinus": Fraxinus, "Poaceae": Poaceae, "Quercus": Quercus, "Ulmus": Ulmus, "Urtica": Urtica}
         mongo_col.insert_one(usuario)
-        return redirect("/muestras")
+        return redirect("/samples")
 
 if __name__ == '__main__':
     app.run(debug=True)
